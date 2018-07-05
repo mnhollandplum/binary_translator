@@ -1,4 +1,6 @@
 class BinaryTranslator
+  attr_reader :alpha_to_binary
+              :translated
   def initialize
     @alpha_to_binary = {
       "a" => "000001",
@@ -29,4 +31,20 @@ class BinaryTranslator
       "z" => "011010"
     }
   end
+
+def translated
+  @alpha_to_binary.values
+end
+
+def translates_a
+  @alpha_to_binary["a"]
+end
+
+def translates_z
+  @alpha_to_binary["z"]
+end
+def translates_turing
+ @alpha_to_binary.map {|t, u, r, i, n, g|}
+
+end
 end
